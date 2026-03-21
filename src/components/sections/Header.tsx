@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -18,9 +17,14 @@ export function Header() {
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               <Sofa className="h-6 w-6" />
             </div>
-            <span className="font-headline text-xl font-bold tracking-tight text-primary">
-              PARADISE <span className="text-foreground">FURNISHINGS</span>
-            </span>
+            <div className="flex flex-col leading-none">
+              <span className="font-headline text-xl font-black tracking-tighter text-primary">
+                PARADISE
+              </span>
+              <span className="font-headline text-[10px] font-bold tracking-[0.2em] text-secondary uppercase">
+                FURNITURE
+              </span>
+            </div>
           </Link>
         </div>
 
@@ -34,7 +38,7 @@ export function Header() {
           <Link href="#products" className="text-sm font-medium hover:text-primary transition-colors">
             Catalogue
           </Link>
-          <Button asChild variant="default" className="bg-primary hover:bg-primary/90">
+          <Button asChild variant="default" className="bg-primary hover:bg-primary/90 font-bold">
             <Link href="#quote">Get a Quote Now</Link>
           </Button>
         </nav>

@@ -1,4 +1,3 @@
-
 import { Sofa, Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 
@@ -12,9 +11,14 @@ export function Footer() {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
                 <Sofa className="h-6 w-6" />
               </div>
-              <span className="font-headline text-xl font-bold tracking-tight text-white">
-                PARADISE <span className="opacity-70">FURNISHINGS</span>
-              </span>
+              <div className="flex flex-col leading-none">
+                <span className="font-headline text-xl font-black tracking-tighter text-primary">
+                  PARADISE
+                </span>
+                <span className="font-headline text-[10px] font-bold tracking-[0.2em] text-white/70 uppercase">
+                  FURNITURE
+                </span>
+              </div>
             </div>
             <p className="text-sm opacity-70 leading-relaxed mb-6">
               The leading authorized dealer of Paradise Furniture in Varanasi. We specialize in ergonomic office seating and innovative furniture solutions.
@@ -33,7 +37,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-6">Quick Links</h4>
+            <h4 className="font-bold text-lg mb-6 text-white">Quick Links</h4>
             <ul className="space-y-4 text-sm opacity-70">
               <li><Link href="#" className="hover:text-primary transition-colors">Experience</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Product Series</Link></li>
@@ -44,7 +48,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-6">Contact Us</h4>
+            <h4 className="font-bold text-lg mb-6 text-white">Contact Us</h4>
             <ul className="space-y-4 text-sm opacity-70">
               <li className="flex gap-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0" />
@@ -56,13 +60,13 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
-                <span>hello@paradisefurnishings.com</span>
+                <span>hello@paradisefurniture.com</span>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-6">Business Hours</h4>
+            <h4 className="font-bold text-lg mb-6 text-white">Business Hours</h4>
             <ul className="space-y-4 text-sm opacity-70">
               <li className="flex justify-between">
                 <span>Monday - Saturday</span>
@@ -77,7 +81,7 @@ export function Footer() {
         </div>
         
         <div className="pt-8 border-t border-white/10 text-center text-xs opacity-50">
-          <p>© {new Date().getFullYear()} Paradise Furnishings Varanasi. All Rights Reserved. Authorized Dealer.</p>
+          <p>© {new Date().getFullYear()} Paradise Furniture Varanasi. All Rights Reserved. Authorized Dealer.</p>
         </div>
       </div>
     </footer>
