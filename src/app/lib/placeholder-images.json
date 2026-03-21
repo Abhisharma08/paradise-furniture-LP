@@ -1,0 +1,41 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-office",
+      "description": "Modern office setup with ergonomic chairs",
+      "imageUrl": "https://picsum.photos/seed/paradise1/1200/600",
+      "imageHint": "modern office chairs"
+    },
+    {
+      "id": "premium-series",
+      "description": "Premium ergonomic office chair",
+      "imageUrl": "https://picsum.photos/seed/paradise2/600/600",
+      "imageHint": "ergonomic chair"
+    },
+    {
+      "id": "diamond-series",
+      "description": "Diamond series executive chair",
+      "imageUrl": "https://picsum.photos/seed/paradise3/600/600",
+      "imageHint": "executive chair"
+    },
+    {
+      "id": "platinum-series",
+      "description": "Platinum series visitor chair",
+      "imageUrl": "https://picsum.photos/seed/paradise4/600/600",
+      "imageHint": "office seating"
+    },
+    {
+      "id": "certification-1",
+      "description": "ISO Certification Badge",
+      "imageUrl": "https://picsum.photos/seed/cert1/200/200",
+      "imageHint": "certification logo"
+    },
+    {
+      "id": "certification-2",
+      "description": "Quality Standard Badge",
+      "imageUrl": "https://picsum.photos/seed/cert2/200/200",
+      "imageHint": "quality badge"
+    }
+  ]
+}
