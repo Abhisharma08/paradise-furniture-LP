@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { submitToHubSpot } from "@/app/actions/hubspot";
-import { CheckCircle2, Loader2, ArrowRight } from "lucide-react";
+import { CheckCircle2, Loader2 } from "lucide-react";
 
 const step1Schema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
@@ -67,7 +67,7 @@ export function MultiStepCatalogueForm() {
           description: result.message,
         });
         form.reset();
-        setStep(3); // Completed state
+        setStep(3);
       }
     } catch (error) {
       toast({
@@ -82,52 +82,45 @@ export function MultiStepCatalogueForm() {
 
   if (step === 3) {
     return (
-      <div className="flex flex-col items-center justify-center p-12 text-center bg-white rounded-3xl shadow-[0_30px_100px_rgba(0,0,0,0.1)] border border-muted animate-in fade-in zoom-in duration-500">
-        <div className="h-20 w-20 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-8">
-          <CheckCircle2 className="h-10 w-10" />
+      <div className="flex flex-col items-center justify-center p-12 text-center bg-white rounded-2xl shadow-2xl border border-muted">
+        <div className="h-16 w-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6">
+          <CheckCircle2 className="h-8 w-8" />
         </div>
-        <h3 className="font-headline text-3xl font-black mb-4">Thank You!</h3>
-        <p className="text-muted-foreground text-lg mb-8 font-semibold">
-          Your catalogue request has been received. Please check your email for the download link.
+        <h3 className="font-headline text-2xl font-black mb-3 text-foreground">Request Received!</h3>
+        <p className="text-muted-foreground text-sm mb-6 font-medium">
+          Thank you for your interest. Our catalogue is on its way to your inbox.
         </p>
-        <Button onClick={() => setStep(1)} variant="outline" className="h-12 px-8 font-bold rounded-lg">Request Another</Button>
+        <Button onClick={() => setStep(1)} variant="outline" className="font-bold">Back to Home</Button>
       </div>
     );
   }
 
   return (
-    <div className="bg-white p-8 md:p-12 rounded-3xl shadow-[0_30px_100px_rgba(0,0,0,0.12)] border border-muted-foreground/5 max-w-lg mx-auto overflow-hidden relative">
-      <div className="absolute top-0 left-0 w-full h-2 bg-muted">
-        <div 
-          className="h-full bg-primary transition-all duration-500 ease-out" 
-          style={{ width: `${(step / 2) * 100}%` }}
-        ></div>
-      </div>
-
-      <div className="text-center mb-10 pt-4">
-        <h3 className="font-headline text-3xl font-black mb-4 text-foreground tracking-tight">
+    <div className="bg-white p-10 md:p-12 rounded-2xl shadow-[0_30px_60px_-12px_rgba(0,0,0,0.12)] border border-muted-foreground/5 max-w-lg mx-auto overflow-hidden relative">
+      <div className="text-center mb-10">
+        <h3 className="font-headline text-2xl font-black mb-2 text-foreground">
           Request for Catalogue
         </h3>
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-muted text-[11px] font-black text-primary uppercase tracking-widest">
+        <p className="text-[12px] font-bold text-primary uppercase tracking-widest">
           Step {step} of 2
-        </div>
+        </p>
       </div>
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           {step === 1 && (
-            <div className="space-y-6 animate-in slide-in-from-right-6 duration-400">
+            <div className="space-y-5 animate-in slide-in-from-right-4 duration-300">
               <FormField
                 control={form.control}
                 name="fullName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-black text-foreground text-xs uppercase tracking-wider">Full Name</FormLabel>
+                    <FormLabel className="font-bold text-foreground text-sm">Name</FormLabel>
                     <FormControl>
                       <Input 
-                        placeholder="e.g. Rahul Sharma" 
+                        placeholder="Your Name" 
                         {...field} 
-                        className="h-14 border-muted bg-muted/20 focus-visible:ring-primary focus-visible:bg-white transition-all rounded-xl font-semibold"
+                        className="h-12 border-muted bg-white focus-visible:ring-primary rounded-md font-medium"
                       />
                     </FormControl>
                     <FormMessage />
@@ -139,12 +132,12 @@ export function MultiStepCatalogueForm() {
                 name="phone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-black text-foreground text-xs uppercase tracking-wider">Phone Number</FormLabel>
+                    <FormLabel className="font-bold text-foreground text-sm">Phone</FormLabel>
                     <FormControl>
                       <Input 
-                        placeholder="+91 00000 00000" 
+                        placeholder="9876543210" 
                         {...field} 
-                        className="h-14 border-muted bg-muted/20 focus-visible:ring-primary focus-visible:bg-white transition-all rounded-xl font-semibold"
+                        className="h-12 border-muted bg-white focus-visible:ring-primary rounded-md font-medium"
                       />
                     </FormControl>
                     <FormMessage />
@@ -156,37 +149,37 @@ export function MultiStepCatalogueForm() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-black text-foreground text-xs uppercase tracking-wider">Email Address</FormLabel>
+                    <FormLabel className="font-bold text-foreground text-sm">Email</FormLabel>
                     <FormControl>
                       <Input 
-                        placeholder="rahul@company.com" 
+                        placeholder="username@example.com" 
                         {...field} 
-                        className="h-14 border-muted bg-muted/20 focus-visible:ring-primary focus-visible:bg-white transition-all rounded-xl font-semibold"
+                        className="h-12 border-muted bg-white focus-visible:ring-primary rounded-md font-medium"
                       />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <Button type="button" onClick={nextStep} className="w-full bg-primary hover:bg-primary/90 h-14 text-base font-black rounded-xl mt-6 group shadow-lg shadow-primary/20">
-                Next <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Button type="button" onClick={nextStep} className="w-full bg-primary hover:bg-primary/90 h-12 text-sm font-bold rounded-md mt-4 shadow-lg shadow-primary/10">
+                Next
               </Button>
             </div>
           )}
 
           {step === 2 && (
-            <div className="space-y-6 animate-in slide-in-from-right-6 duration-400">
+            <div className="space-y-5 animate-in slide-in-from-right-4 duration-300">
               <FormField
                 control={form.control}
                 name="company"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-black text-foreground text-xs uppercase tracking-wider">Company Name</FormLabel>
+                    <FormLabel className="font-bold text-foreground text-sm">Company Name</FormLabel>
                     <FormControl>
                       <Input 
-                        placeholder="Company or Workplace" 
+                        placeholder="Enter your organization" 
                         {...field} 
-                        className="h-14 border-muted bg-muted/20 focus-visible:ring-primary focus-visible:bg-white transition-all rounded-xl font-semibold"
+                        className="h-12 border-muted bg-white focus-visible:ring-primary rounded-md font-medium"
                       />
                     </FormControl>
                     <FormMessage />
@@ -198,10 +191,10 @@ export function MultiStepCatalogueForm() {
                 name="quantity"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-black text-foreground text-xs uppercase tracking-wider">Requirement Size</FormLabel>
+                    <FormLabel className="font-bold text-foreground text-sm">Estimated Quantity</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
-                        <SelectTrigger className="h-14 border-muted bg-muted/20 rounded-xl font-semibold">
+                        <SelectTrigger className="h-12 border-muted bg-white rounded-md font-medium">
                           <SelectValue placeholder="Select quantity" />
                         </SelectTrigger>
                       </FormControl>
@@ -216,14 +209,14 @@ export function MultiStepCatalogueForm() {
                   </FormItem>
                 )}
               />
-              <div className="flex gap-4 pt-6">
-                <Button type="button" variant="outline" onClick={() => setStep(1)} className="flex-1 h-14 font-black border-muted rounded-xl hover:bg-muted/50">
+              <div className="flex gap-4 pt-4">
+                <Button type="button" variant="ghost" onClick={() => setStep(1)} className="flex-1 h-12 font-bold rounded-md">
                   Back
                 </Button>
-                <Button type="submit" className="flex-[2] bg-primary hover:bg-primary/90 h-14 text-base font-black rounded-xl shadow-lg shadow-primary/20" disabled={isSubmitting}>
+                <Button type="submit" className="flex-[2] bg-primary hover:bg-primary/90 h-12 text-sm font-bold rounded-md shadow-lg shadow-primary/10" disabled={isSubmitting}>
                   {isSubmitting ? (
                     <>
-                      <Loader2 className="mr-2 h-5 w-5 animate-spin" /> Submitting...
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting...
                     </>
                   ) : (
                     "Submit Request"
@@ -234,10 +227,6 @@ export function MultiStepCatalogueForm() {
           )}
         </form>
       </Form>
-      
-      <p className="mt-10 text-center text-xs text-muted-foreground font-semibold opacity-60">
-        By submitting, you agree to receive the digital catalogue and communication from Paradise Furniture Varanasi.
-      </p>
     </div>
   );
 }

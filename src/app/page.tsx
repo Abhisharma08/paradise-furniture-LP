@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Features } from "@/components/sections/Features";
@@ -12,10 +11,11 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        {/* Placement moved directly below Hero per user request */}
+        <CustomInquiry />
         <Features />
         <ProductShowcase />
         
-        {/* Experience Section Headline Highlight */}
         <section className="bg-primary text-primary-foreground py-16 overflow-hidden relative">
           <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
             <h2 className="font-headline text-3xl md:text-5xl font-extrabold mb-6">Your Trusted Furniture Partner in Varanasi</h2>
@@ -25,8 +25,6 @@ export default function Home() {
           </div>
           <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
         </section>
-
-        <CustomInquiry />
       </main>
       <Footer />
     </div>
