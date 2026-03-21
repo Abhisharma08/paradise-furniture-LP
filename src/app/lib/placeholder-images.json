@@ -36,6 +36,12 @@
       "description": "Quality Standard Badge",
       "imageUrl": "https://picsum.photos/seed/cert2/200/200",
       "imageHint": "quality badge"
+    },
+    {
+      "id": "productivity-office",
+      "description": "Ergonomic seating solutions in a modern office",
+      "imageUrl": "https://picsum.photos/seed/paradise5/800/500",
+      "imageHint": "office desk chairs"
     }
   ]
 }

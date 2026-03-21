@@ -1,8 +1,10 @@
+
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Features } from "@/components/sections/Features";
 import { ProductShowcase } from "@/components/sections/ProductShowcase";
 import { CustomInquiry } from "@/components/sections/CustomInquiry";
+import { Productivity } from "@/components/sections/Productivity";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
@@ -11,8 +13,8 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        {/* Placement moved directly below Hero per user request */}
         <CustomInquiry />
+        <Productivity />
         <Features />
         <ProductShowcase />
         
