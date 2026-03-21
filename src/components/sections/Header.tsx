@@ -28,18 +28,18 @@ export function Header() {
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8">
-          <Link href="#experience" className="text-sm font-medium hover:text-primary transition-colors">
+        <nav className="hidden md:flex items-center gap-12">
+          <Link href="#experience" className="text-sm font-semibold hover:text-primary transition-colors">
             Experience
           </Link>
-          <Link href="#testimonials" className="text-sm font-medium hover:text-primary transition-colors">
-            Testimonials
+          <Link href="#products" className="text-sm font-semibold hover:text-primary transition-colors">
+            Products
           </Link>
-          <Link href="#products" className="text-sm font-medium hover:text-primary transition-colors">
-            Catalogue
+          <Link href="#experience" className="text-sm font-semibold hover:text-primary transition-colors">
+            Why Us
           </Link>
-          <Button asChild variant="default" className="bg-primary hover:bg-primary/90 font-bold">
-            <Link href="#quote">Get a Quote Now</Link>
+          <Button asChild variant="default" className="bg-primary hover:bg-primary/90 font-bold px-6">
+            <Link href="#quote">Enquire Now</Link>
           </Button>
         </nav>
 
@@ -54,14 +54,14 @@ export function Header() {
           <Link href="#experience" onClick={() => setIsOpen(false)} className="text-base font-medium">
             Experience
           </Link>
-          <Link href="#testimonials" onClick={() => setIsOpen(false)} className="text-base font-medium">
-            Testimonials
-          </Link>
           <Link href="#products" onClick={() => setIsOpen(false)} className="text-base font-medium">
-            Catalogue
+            Products
+          </Link>
+          <Link href="#experience" onClick={() => setIsOpen(false)} className="text-base font-medium">
+            Why Us
           </Link>
           <Button asChild className="w-full">
-            <Link href="#quote" onClick={() => setIsOpen(false)}>Get a Quote Now</Link>
+            <Link href="#quote" onClick={() => setIsOpen(false)}>Enquire Now</Link>
           </Button>
         </div>
       </div>
