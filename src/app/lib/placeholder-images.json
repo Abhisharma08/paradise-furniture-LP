@@ -10,20 +10,68 @@
     {
       "id": "premium-series",
       "description": "Premium ergonomic office chair",
-      "imageUrl": "https://picsum.photos/seed/paradise2/600/600",
-      "imageHint": "ergonomic chair"
+      "imageUrl": "https://picsum.photos/seed/p1/600/600",
+      "imageHint": "premium chair"
     },
     {
       "id": "diamond-series",
       "description": "Diamond series executive chair",
-      "imageUrl": "https://picsum.photos/seed/paradise3/600/600",
+      "imageUrl": "https://picsum.photos/seed/p2/600/600",
       "imageHint": "executive chair"
     },
     {
       "id": "platinum-series",
       "description": "Platinum series visitor chair",
-      "imageUrl": "https://picsum.photos/seed/paradise4/600/600",
+      "imageUrl": "https://picsum.photos/seed/p3/600/600",
       "imageHint": "office seating"
+    },
+    {
+      "id": "task-ergo",
+      "description": "Task Ergo series chair",
+      "imageUrl": "https://picsum.photos/seed/p4/600/600",
+      "imageHint": "task chair"
+    },
+    {
+      "id": "divinity-series",
+      "description": "Divinity series executive chair",
+      "imageUrl": "https://picsum.photos/seed/p5/600/600",
+      "imageHint": "luxury chair"
+    },
+    {
+      "id": "training-series",
+      "description": "Training series foldable chair",
+      "imageUrl": "https://picsum.photos/seed/p6/600/600",
+      "imageHint": "training chair"
+    },
+    {
+      "id": "gold-series",
+      "description": "Gold series office chair",
+      "imageUrl": "https://picsum.photos/seed/p7/600/600",
+      "imageHint": "office chair"
+    },
+    {
+      "id": "silver-series",
+      "description": "Silver series chair",
+      "imageUrl": "https://picsum.photos/seed/p8/600/600",
+      "imageHint": "desk chair"
+    },
+    {
+      "id": "ergo-series",
+      "description": "Ergo series specialized chair",
+      "imageUrl": "https://picsum.photos/seed/p9/600/600",
+      "imageHint": "ergonomic chair"
+    },
+    {
+      "id": "cafeteria-series",
+      "description": "Cafeteria series seating",
+      "imageUrl": "https://picsum.photos/seed/p10/600/600",
+      "imageHint": "cafeteria chair"
+    },
+    {
+      "id": "lounge-series",
+      "description": "Lounge series sofa",
+      "imageUrl": "https://picsum.photos/seed/p11/600/600",
+      "imageHint": "lounge sofa"
     },
     {
       "id": "certification-1",
