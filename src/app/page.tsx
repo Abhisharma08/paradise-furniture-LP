@@ -1,9 +1,9 @@
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
-import { Features } from "@/components/sections/Features";
-import { ProductShowcase } from "@/components/sections/ProductShowcase";
 import { CustomInquiry } from "@/components/sections/CustomInquiry";
 import { Productivity } from "@/components/sections/Productivity";
+import { ProductShowcase } from "@/components/sections/ProductShowcase";
+import { Features } from "@/components/sections/Features";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
@@ -16,16 +16,6 @@ export default function Home() {
         <Productivity />
         <ProductShowcase />
         <Features />
-        
-        <section className="bg-primary text-primary-foreground py-16 overflow-hidden relative">
-          <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
-            <h2 className="font-headline text-3xl md:text-5xl font-extrabold mb-6">Your Trusted Furniture Partner in Varanasi</h2>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
-              Join 500+ businesses who have transformed their office culture through ergonomic comfort.
-            </p>
-          </div>
-          <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
-        </section>
       </main>
       <Footer />
     </div>

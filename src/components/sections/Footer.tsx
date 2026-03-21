@@ -1,87 +1,45 @@
-import { Sofa, Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Sofa } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background py-16">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
-                <Sofa className="h-6 w-6" />
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="font-headline text-xl font-black tracking-tighter text-primary">
-                  PARADISE
-                </span>
-                <span className="font-headline text-[10px] font-bold tracking-[0.2em] text-white/70 uppercase">
-                  FURNITURE
-                </span>
-              </div>
-            </div>
-            <p className="text-sm opacity-70 leading-relaxed mb-6">
-              The leading authorized dealer of Paradise Furniture in Varanasi. We specialize in ergonomic office seating and innovative furniture solutions.
-            </p>
-            <div className="flex gap-4">
-              <Link href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                <Instagram className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Quick Links</h4>
-            <ul className="space-y-4 text-sm opacity-70">
-              <li><Link href="#" className="hover:text-primary transition-colors">Experience</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Product Series</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Testimonials</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Get a Quote</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Contact Us</h4>
-            <ul className="space-y-4 text-sm opacity-70">
-              <li className="flex gap-3">
-                <MapPin className="h-5 w-5 text-primary shrink-0" />
-                <span>Sigra Road, Varanasi, Uttar Pradesh - 221010</span>
-              </li>
-              <li className="flex gap-3">
-                <Phone className="h-5 w-5 text-primary shrink-0" />
-                <span>+91 98765 43210</span>
-              </li>
-              <li className="flex gap-3">
-                <Mail className="h-5 w-5 text-primary shrink-0" />
-                <span>hello@paradisefurniture.com</span>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-lg mb-6 text-white">Business Hours</h4>
-            <ul className="space-y-4 text-sm opacity-70">
-              <li className="flex justify-between">
-                <span>Monday - Saturday</span>
-                <span>10:00 AM - 8:00 PM</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Sunday</span>
-                <span>Closed</span>
-              </li>
-            </ul>
-          </div>
+    <footer className="w-full">
+      {/* CTA Section */}
+      <section className="bg-black text-white py-16 md:py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-headline text-3xl md:text-5xl font-black mb-6">
+            Need a <span className="text-primary">Custom Design?</span>
+          </h2>
+          <p className="text-white/80 text-sm md:text-lg max-w-2xl mx-auto mb-10 font-medium">
+            Looking for something unique? We can tailor your furniture to fit your style and requirements perfectly.
+          </p>
+          <Button asChild className="bg-primary hover:bg-primary/90 text-white font-black px-10 h-14 rounded-lg text-lg transition-transform hover:scale-105 active:scale-95">
+            <Link href="#quote">Enquire Now</Link>
+          </Button>
         </div>
-        
-        <div className="pt-8 border-t border-white/10 text-center text-xs opacity-50">
-          <p>© {new Date().getFullYear()} Paradise Furniture Varanasi. All Rights Reserved. Authorized Dealer.</p>
+      </section>
+
+      {/* Main Footer Bar */}
+      <div className="bg-white py-8 border-t border-muted">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-2">
+            <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-white">
+              <Sofa className="h-5 w-5" />
+            </div>
+            <div className="flex flex-col leading-none">
+              <span className="font-headline text-lg font-black tracking-tighter text-primary">
+                PARADISE
+              </span>
+              <span className="font-headline text-[8px] font-bold tracking-[0.2em] text-foreground/40 uppercase">
+                FURNITURE
+              </span>
+            </div>
+          </div>
+          
+          <p className="text-xs md:text-sm text-muted-foreground font-medium">
+            © 2026 R R Agencies, Varanasi. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
