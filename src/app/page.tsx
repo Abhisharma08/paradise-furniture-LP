@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Features } from "@/components/sections/Features";
@@ -15,8 +14,8 @@ export default function Home() {
         <Hero />
         <CustomInquiry />
         <Productivity />
-        <Features />
         <ProductShowcase />
+        <Features />
         
         <section className="bg-primary text-primary-foreground py-16 overflow-hidden relative">
           <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
