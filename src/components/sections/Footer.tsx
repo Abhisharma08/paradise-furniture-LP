@@ -1,43 +1,49 @@
-import { Sofa } from "lucide-react";
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
     <footer className="w-full">
-      {/* CTA Section */}
+      {/* CTA Section - Need a Custom Design? */}
       <section className="bg-black text-white py-16 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-headline text-3xl md:text-5xl font-black mb-6">
-            Need a <span className="text-primary">Custom Design?</span>
+          <h2 className="font-headline text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+            Need a <span className="text-[#c61a1a]">Custom</span> Design?
           </h2>
-          <p className="text-white/80 text-sm md:text-lg max-w-2xl mx-auto mb-10 font-medium">
+          <p className="text-white/80 text-sm md:text-base lg:text-lg max-w-2xl mx-auto mb-10 font-normal">
             Looking for something unique? We can tailor your furniture to fit your style and requirements perfectly.
           </p>
-          <Button asChild className="bg-primary hover:bg-primary/90 text-white font-black px-10 h-14 rounded-lg text-lg transition-transform hover:scale-105 active:scale-95">
+          <Button 
+            asChild 
+            className="bg-[#c61a1a] hover:bg-[#a01515] text-white font-bold px-10 h-12 rounded-md text-base transition-all"
+          >
             <Link href="#quote">Enquire Now</Link>
           </Button>
         </div>
       </section>
 
-      {/* Main Footer Bar */}
-      <div className="bg-white py-8 border-t border-muted">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-white">
-              <Sofa className="h-5 w-5" />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className="font-headline text-lg font-black tracking-tighter text-primary">
-                PARADISE
-              </span>
-              <span className="font-headline text-[8px] font-bold tracking-[0.2em] text-foreground/40 uppercase">
-                FURNITURE
-              </span>
+      {/* Main Footer Bar - Exactly like reference image */}
+      <div className="bg-white py-6 md:py-8 border-t border-gray-100">
+        <div className="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
+          
+          {/* Paradise Furniture Logo - Left Aligned */}
+          <div className="flex items-center">
+            <div className="relative w-36 h-10 md:w-44 md:h-12">
+              <Image
+                src="/logo.png" // Ensure this matches your logo's path
+                alt="Paradise Furniture Varanasi"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
           </div>
           
-          <p className="text-xs md:text-sm text-muted-foreground font-medium">
+          {/* Copyright Text - Right Aligned with accurate styling */}
+          <p className="text-[10px] md:text-xs lg:text-sm text-gray-400 font-normal">
             © 2026 R R Agencies, Varanasi. All rights reserved.
           </p>
         </div>
