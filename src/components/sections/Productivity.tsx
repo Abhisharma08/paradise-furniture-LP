@@ -30,10 +30,7 @@ export function Productivity() {
             </h2>
             
             <p className="text-xs sm:text-sm md:text-base text-white/70 leading-relaxed font-normal max-w-lg">
-              At R R Agencies, Varanasi's authorized dealer of Paradise Furniture, we 
-              bring you premium seating solutions that enhance comfort and 
-              productivity. Our collections are designed for every need — from 
-              corporate offices and startups to training rooms, cafes, and lounges.
+              Paradise Furniture offers a diverse range of ergonomic and stylish seating solutions designed to enhance both comfort and productivity. With a focus on quality craftsmanship, their products include office chairs, workstations, and lounge seating, all tailored to meet modern workspace needs.
             </p>
           </div>
           
