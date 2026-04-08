@@ -77,7 +77,7 @@ const series = [
 export function ProductShowcase() {
   return (
     <section id="products" className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-12 xl:px-16">
         
         <div className="text-center mb-12 md:mb-16 space-y-4">
           <div className="flex justify-center">
@@ -95,10 +95,10 @@ export function ProductShowcase() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {series.map((item, idx) => (
-            <div key={idx} className="group bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.1)] transition-all duration-300 border border-gray-100 flex flex-col h-full">
+            <div key={idx} className="group flex h-full flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
               
               <div className="p-3 pb-0">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-md">
                   <Image
                     src={item.imageUrl}
                     alt={item.title}

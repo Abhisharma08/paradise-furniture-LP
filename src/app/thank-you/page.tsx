@@ -2,54 +2,54 @@
 
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
+import { Header } from "@/components/sections/Header";
+import { Footer } from "@/components/sections/Footer";
 
 export default function ThankYouPage() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+    <div className="flex min-h-screen flex-col bg-gray-50">
+      <Header />
 
-      {/* Card */}
-      <div className="w-full max-w-2xl bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center">
+      <main className="flex flex-1 items-center justify-center px-4 py-16">
+        <div className="w-full max-w-2xl rounded-lg bg-white p-8 text-center shadow-xl md:p-12">
 
-        {/* Icon */}
-        <div className="flex justify-center mb-6">
-          <div className="bg-green-100 p-4 rounded-full">
-            <CheckCircle2 className="text-green-600 w-10 h-10" />
+          <div className="mb-6 flex justify-center">
+            <div className="rounded-full bg-green-100 p-4">
+              <CheckCircle2 className="h-10 w-10 text-green-600" />
+            </div>
           </div>
-        </div>
 
-        {/* Heading */}
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
-          Application Received!
-        </h1>
+          <h1 className="mb-3 text-2xl font-bold text-gray-800 md:text-3xl">
+            Application Received!
+          </h1>
 
-        {/* Subtext */}
-        <p className="text-gray-500 text-sm md:text-base mb-8 max-w-lg mx-auto leading-relaxed">
-          Thank you for your interest. Your details have been successfully submitted.
-          Our team will connect with you shortly.
-        </p>
-
-        {/* Info Box */}
-        <div className="bg-gray-100 rounded-xl p-5 md:p-6 mb-8">
-          <h3 className="font-semibold text-gray-700 mb-2">
-            What happens next?
-          </h3>
-          <p className="text-sm text-gray-500 leading-relaxed">
-            Our expert will contact you within the next 24 hours to discuss your
-            requirements and guide you through the next steps.
+          <p className="mx-auto mb-8 max-w-lg text-sm leading-relaxed text-gray-500 md:text-base">
+            Thank you for your interest. Your details have been successfully submitted.
+            Our team will connect with you shortly.
           </p>
+
+          <div className="mb-8 rounded-lg bg-gray-100 p-5 md:p-6">
+            <h3 className="mb-2 font-semibold text-gray-700">
+              What happens next?
+            </h3>
+            <p className="text-sm leading-relaxed text-gray-500">
+              Our expert will contact you within the next 24 hours to discuss your
+              requirements and guide you through the next steps.
+            </p>
+          </div>
+
+          <div className="mb-6 border-t border-gray-200" />
+
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 rounded-md border border-gray-300 px-5 py-2.5 text-gray-700 transition hover:bg-gray-100"
+          >
+            ← Back to Homepage
+          </Link>
         </div>
+      </main>
 
-        {/* Divider */}
-        <div className="border-t border-gray-200 mb-6" />
-
-        {/* Button */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100 transition"
-        >
-          ← Back to Homepage
-        </Link>
-      </div>
+      <Footer />
     </div>
   );
 }

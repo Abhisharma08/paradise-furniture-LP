@@ -14,7 +14,6 @@ export default function Home() {
         <CustomInquiry />
         <Productivity />
         <ProductShowcase />
-        
       </main>
       <Footer />
     </div>

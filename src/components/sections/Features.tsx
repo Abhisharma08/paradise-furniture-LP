@@ -35,8 +35,8 @@ const features = [
 
 export function Features() {
   return (
-    <section id="why-us" className="bg-[#F8F9FA] py-24">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="why-us" className="scroll-mt-24 bg-[#F8F9FA] py-16 md:py-24">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-12 xl:px-16">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-3 py-1 rounded-full bg-muted text-[10px] font-bold text-muted-foreground mb-4 uppercase tracking-wider">
             Why Us?
@@ -51,7 +51,7 @@ export function Features() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, idx) => (
-            <div key={idx} className="bg-white p-10 rounded-2xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.08)] border border-transparent hover:border-muted-foreground/10 transition-all text-center flex flex-col items-center">
+            <div key={idx} className="flex flex-col items-center rounded-lg border border-transparent bg-white p-8 text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.08)] transition-all hover:border-muted-foreground/10 md:p-10">
               <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center mb-6 shadow-[0_0_20px_-5px_rgba(220,38,38,0.15)] border border-primary/5">
                 <feature.icon className="h-6 w-6 text-primary" />
               </div>

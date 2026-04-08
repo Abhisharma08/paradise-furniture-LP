@@ -3,8 +3,16 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Paradise Furniture | Authorized Dealer in Varanasi',
-  description: 'Authorized Dealer of Paradise Furniture in Varanasi. Premium ergonomic seating solutions for your office.',
+  title: "Unmatched Comfort with Paradise Office Chairs",
+  description:
+    "Explore Paradise Furniture's wide range of certified ergonomic office chairs. Experience superior comfort and support for your workspace.",
+  keywords: [
+    "ergonomic chairs",
+    "office furniture",
+    "paradise",
+    "comfort",
+    "certified quality",
+  ],
 };
 
 export default function RootLayout({

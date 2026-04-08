@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -14,47 +12,82 @@ import {
 } from "@/components/ui/select";
 
 export function Hero() {
-  const router = useRouter();
-
   const heroImg = {
     imageUrl:
-      "https://paradisefurniture.in/wp-content/uploads/2026/03/4v2kb0jk01rmt0cx54t8wfd1pc_result_0.jpg-scaled.jpeg",
+      "https://res.cloudinary.com/ddqqlfsjp/image/upload/q_auto/f_auto/v1775655040/80jptvzyb5rmt0cx54rvrtt4gr_result_0.jpg_stecw0.jpg",
   };
 
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [savingStep, setSavingStep] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
     company: "",
+    city: "",
+    lookingFor: "",
     quantity: "1-5 Chairs",
   });
 
-  const handleNext = () => {
+  const saveLeadStep = async (stepNumber: number) => {
+    const payload =
+      stepNumber === 1
+        ? {
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email,
+            step: stepNumber,
+          }
+        : {
+            ...formData,
+            step: stepNumber,
+          };
+
+    const res = await fetch("/api/hubspot", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!res.ok) throw new Error("API failed");
+
+    const data = await res.json();
+
+    if (data.success !== true) {
+      throw new Error(data.error || "HubSpot save failed");
+    }
+
+    return data;
+  };
+
+  const handleNext = async () => {
     if (!formData.name || !formData.phone || !formData.email) {
       alert("Please fill all fields");
       return;
     }
-    setStep(2);
+
+    setSavingStep(true);
+
+    try {
+      await saveLeadStep(1);
+      setStep(2);
+    } catch (err) {
+      console.error("Step 1 Save Error:", err);
+      alert("Something went wrong while saving your details");
+    }
+
+    setSavingStep(false);
   };
 
   const handleSubmit = async () => {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/hubspot", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!res.ok) throw new Error("API failed");
-
-      const data = await res.json();
+      const data = await saveLeadStep(2);
 
       if (data.success === true) {
         window.location.href = "/thank-you";
@@ -70,51 +103,43 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-[100vh] md:h-[85vh] flex items-center py-10 md:py-0">
-
-      {/* Background */}
+    <section className="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden py-12 md:min-h-[calc(100vh-5rem)] md:py-16">
       <div className="absolute inset-0">
         <img
           src={heroImg.imageUrl}
-          alt="bg"
-          className="w-full h-full object-cover"
+          alt=""
+          className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      {/* CONTAINER */}
-      <div className="container relative z-20 mx-auto px-4 md:px-6 flex flex-col md:flex-row gap-10 md:gap-0 justify-between items-center text-white">
-
-        {/* LEFT CONTENT */}
-        <div className="max-w-lg space-y-4 text-center md:text-left">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
-            Buy <span className="text-red-500">Your Destination</span><br />
-            <span className="text-red-500">for</span> – Office Chairs
+      <div className="relative z-20 mx-auto grid w-full max-w-7xl items-center gap-8 px-4 text-white sm:px-6 lg:grid-cols-2 lg:gap-10 lg:px-12 xl:gap-12 xl:px-16">
+        <div className="mx-auto max-w-xl space-y-5 text-center lg:mx-0 lg:text-left">
+          <h1 className="text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
+            <span className="text-red-500">Your Destination</span><br />
+            <span className="text-red-500">for</span> Office Chairs
           </h1>
 
-          <p className="text-sm text-white/80">
+          <p className="mx-auto max-w-lg text-sm leading-relaxed text-white/80 sm:text-base lg:mx-0">
             Elevate your workspace with our extensive selection of office chairs and experience the Paradise difference for yourself today!
           </p>
 
-          <Button className="bg-red-600 w-full sm:w-auto">
+          <Button className="w-full rounded-md bg-red-600 hover:bg-red-700 sm:w-auto">
             Download Catalogue
           </Button>
         </div>
 
-        {/* FORM */}
-        <div className="bg-white text-black p-5 sm:p-6 rounded-2xl w-full max-w-md shadow-xl">
-
-          <h2 className="text-xl font-bold text-center">
+        <div id="quote" className="mx-auto w-full max-w-md scroll-mt-24 rounded-lg bg-white p-5 text-black shadow-xl sm:p-6 lg:mx-0 lg:justify-self-start">
+          <h2 className="text-center text-xl font-bold">
             Request for Catalogue
           </h2>
 
-          <p className="text-center text-red-500 text-sm mb-4 tracking-wide">
+          <p className="mb-4 text-center text-sm tracking-wide text-red-500">
             STEP {step} OF 2
           </p>
 
           {step === 1 && (
             <div className="space-y-4">
-
               <div>
                 <label className="text-sm font-medium">Name</label>
                 <Input
@@ -150,16 +175,16 @@ export function Hero() {
 
               <Button
                 onClick={handleNext}
-                className="w-full bg-red-600 hover:bg-red-700"
+                disabled={savingStep}
+                className="w-full rounded-md bg-red-600 hover:bg-red-700"
               >
-                Next
+                {savingStep ? "Saving..." : "Next"}
               </Button>
             </div>
           )}
 
           {step === 2 && (
             <div className="space-y-4">
-
               <div>
                 <label className="text-sm font-medium">Company Name</label>
                 <Input
@@ -169,6 +194,42 @@ export function Hero() {
                     setFormData({ ...formData, company: e.target.value })
                   }
                 />
+              </div>
+
+              <div>
+                <label className="text-sm font-medium">City</label>
+                <Input
+                  placeholder="Enter your city"
+                  value={formData.city}
+                  onChange={(e) =>
+                    setFormData({ ...formData, city: e.target.value })
+                  }
+                />
+              </div>
+
+              <div>
+                <label className="text-sm font-medium">
+                  Looking For
+                </label>
+
+                <Select
+                  value={formData.lookingFor}
+                  onValueChange={(value) =>
+                    setFormData({ ...formData, lookingFor: value })
+                  }
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select an option" />
+                  </SelectTrigger>
+
+                  <SelectContent>
+                    <SelectItem value="Office">Office</SelectItem>
+                    <SelectItem value="Living Room">Living Room</SelectItem>
+                    <SelectItem value="Bistro/Cafe">Bistro/Cafe</SelectItem>
+                    <SelectItem value="Classroom">Classroom</SelectItem>
+                    <SelectItem value="Others">Others</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               <div>
@@ -195,8 +256,9 @@ export function Hero() {
                 </Select>
               </div>
 
-              <div className="flex gap-3 pt-2">
+              <div className="flex items-center gap-3 pt-2">
                 <button
+                  type="button"
                   onClick={() => setStep(1)}
                   className="text-sm font-medium"
                 >
@@ -206,7 +268,7 @@ export function Hero() {
                 <Button
                   onClick={handleSubmit}
                   disabled={loading}
-                  className="w-full bg-red-600 hover:bg-red-700"
+                  className="w-full rounded-md bg-red-600 hover:bg-red-700"
                 >
                   {loading ? "Submitting..." : "Submit Request"}
                 </Button>

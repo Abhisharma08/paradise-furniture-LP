@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="w-full">
       {/* CTA Section - Need a Custom Design? */}
       <section className="bg-black text-white py-16 md:py-20">
-        <div className="container mx-auto px-4 text-center">
+        <div className="mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-12 xl:px-16">
           <h2 className="font-headline text-3xl md:text-5xl font-bold mb-6 tracking-tight">
             Need a <span className="text-[#c61a1a]">Custom</span> Design?
           </h2>
@@ -20,14 +20,14 @@ export function Footer() {
             asChild 
             className="bg-[#c61a1a] hover:bg-[#a01515] text-white font-bold px-10 h-12 rounded-md text-base transition-all"
           >
-            <Link href="#quote">Enquire Now</Link>
+            <Link href="/#quote">Enquire Now</Link>
           </Button>
         </div>
       </section>
 
       {/* Main Footer Bar - Exactly like reference image */}
       <div className="bg-white py-6 md:py-8 border-t border-gray-100">
-        <div className="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:px-6 md:flex-row md:gap-4 lg:px-12 xl:px-16">
           
           {/* Paradise Furniture Logo - Left Aligned */}
           <div className="flex items-center">
