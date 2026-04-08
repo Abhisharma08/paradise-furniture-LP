@@ -88,12 +88,12 @@ export function Hero() {
         {/* LEFT CONTENT */}
         <div className="max-w-lg space-y-4 text-center md:text-left">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
-            Buy <span className="text-red-500">Office Chairs in</span><br />
-            <span className="text-red-500">Varanasi</span> – Authorized Dealer of Paradise Furniture
+            Buy <span className="text-red-500">Your Destination</span><br />
+            <span className="text-red-500">for</span> – Office Chairs
           </h1>
 
           <p className="text-sm text-white/80">
-            Elevate your workspace with authentic Paradise Furniture office chairs — now available through our trusted authorized dealership in Varanasi. Whether you’re upgrading a home office or outfitting a corporate space, we offer the perfect blend of comfort, style, and durability.
+            Elevate your workspace with our extensive selection of office chairs and experience the Paradise difference for yourself today!
           </p>
 
           <Button className="bg-red-600 w-full sm:w-auto">
