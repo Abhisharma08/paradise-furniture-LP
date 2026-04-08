@@ -33,7 +33,7 @@ export function Footer() {
           <div className="flex items-center">
             <div className="relative w-36 h-10 md:w-44 md:h-12">
               <Image
-                src="/logo.png" // Ensure this matches your logo's path
+                src="https://res.cloudinary.com/demfgmwjk/image/upload/v1775528217/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74_wjyffw.webp"
                 alt="Paradise Furniture Varanasi"
                 fill
                 className="object-contain"
@@ -44,7 +44,7 @@ export function Footer() {
           
           {/* Copyright Text - Right Aligned with accurate styling */}
           <p className="text-[10px] md:text-xs lg:text-sm text-gray-400 font-normal">
-            © 2026 R R Agencies, Varanasi. All rights reserved.
+            © 2026 Paradise. All rights reserved.
           </p>
         </div>
       </div>

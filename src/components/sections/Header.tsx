@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sofa } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -12,20 +13,22 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6">
+        
         {/* Logo Section */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground transition-transform group-hover:scale-105">
-              <Sofa className="h-6 w-6" />
+            
+            {/* ✅ Only Logo Image */}
+            <div className="flex items-center justify-center transition-transform group-hover:scale-105">
+              <Image
+                src="https://res.cloudinary.com/demfgmwjk/image/upload/v1775528217/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74_wjyffw.webp"
+                alt="Paradise Furniture"
+                width={140}
+                height={50}
+                className="object-contain"
+              />
             </div>
-            <div className="flex flex-col leading-none">
-              <span className="font-headline text-xl font-black tracking-tighter text-primary italic">
-                PARADISE
-              </span>
-              <span className="font-headline text-[9px] font-bold tracking-[0.2em] text-foreground/40 uppercase">
-                FURNITURE
-              </span>
-            </div>
+
           </Link>
         </div>
 

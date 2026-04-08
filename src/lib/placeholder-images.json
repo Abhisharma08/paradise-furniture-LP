@@ -1,5 +1,10 @@
 {
   "placeholderImages": [
-   
+    {
+      "id": "hero-office",
+      "description": "Office chairs banner",
+      "imageUrl": "https://paradisefurniture.in/wp-content/uploads/2026/03/4v2kb0jk01rmt0cx54t8wfd1pc_result_0.jpg-scaled.jpeg",
+      "imageHint": "office chairs"
+    }
   ]
 }
