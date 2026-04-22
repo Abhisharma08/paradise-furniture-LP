@@ -115,7 +115,7 @@ export function Hero() {
 
       <div className="relative z-20 mx-auto grid w-full max-w-7xl items-center gap-8 px-4 text-white sm:px-6 lg:grid-cols-2 lg:gap-10 lg:px-12 xl:gap-12 xl:px-16">
         <div className="mx-auto max-w-xl space-y-5 text-center lg:mx-0 lg:text-left">
-          <h1 className="text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
+          <h1 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
             <span className="text-red-500">Your Destination</span><br />
             <span className="text-red-500">for</span> Office Chairs
           </h1>
@@ -124,7 +124,7 @@ export function Hero() {
             Elevate your workspace with our extensive selection of office chairs and experience the Paradise difference for yourself today!
           </p>
 
-          <Button className="w-full rounded-md bg-red-600 hover:bg-red-700 sm:w-auto">
+          <Button className="hidden md:inline-block rounded-md bg-red-600 hover:bg-red-700">
             Download Catalogue
           </Button>
         </div>

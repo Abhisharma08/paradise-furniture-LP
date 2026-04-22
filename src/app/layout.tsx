@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { FloatingEnquireButton } from "@/components/FloatingEnquireButton";
 
 export const metadata: Metadata = {
   title: "Unmatched Comfort with Paradise Office Chairs",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className="font-body antialiased selection:bg-primary selection:text-primary-foreground">
         {children}
         <Toaster />
+        <FloatingEnquireButton />
       </body>
     </html>
   );
