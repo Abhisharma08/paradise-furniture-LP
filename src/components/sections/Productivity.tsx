@@ -9,7 +9,7 @@ export function Productivity() {
           <div className="flex w-full justify-center animate-in fade-in slide-in-from-left-8 duration-700 lg:justify-start">
             <div className="relative aspect-[4/3] w-full max-w-xl overflow-hidden rounded-lg shadow-2xl">
               <img
-                src="https://res.cloudinary.com/demfgmwjk/image/upload/v1775623322/550x310_xz6kvl_gnzgrr.webp"
+                src="https://res.cloudinary.com/dfb0umklg/images/v1776222279/WhatsApp-Image-2026-04-14-at-6.41.58-PM/WhatsApp-Image-2026-04-14-at-6.41.58-PM.jpeg"
                 alt="Productivity Setup"
                 className="h-full w-full object-cover"
               />
