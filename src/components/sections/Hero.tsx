@@ -35,15 +35,15 @@ export function Hero() {
     const payload =
       stepNumber === 1
         ? {
-            name: formData.name,
-            phone: formData.phone,
-            email: formData.email,
-            step: stepNumber,
-          }
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          step: stepNumber,
+        }
         : {
-            ...formData,
-            step: stepNumber,
-          };
+          ...formData,
+          step: stepNumber,
+        };
 
     const res = await fetch("/api/hubspot", {
       method: "POST",
@@ -165,7 +165,7 @@ export function Hero() {
               <div>
                 <label className="text-sm font-medium">Email</label>
                 <Input
-                  placeholder="username@example.com"
+                  placeholder="Your Email"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
