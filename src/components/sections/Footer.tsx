@@ -31,15 +31,16 @@ export function Footer() {
           
           {/* Paradise Furniture Logo - Left Aligned */}
           <div className="flex items-center">
-            <div className="relative w-36 h-10 md:w-44 md:h-12">
+            <Link href="/" aria-label="Paradise Furniture home">
               <Image
-                src="https://res.cloudinary.com/demfgmwjk/image/upload/v1775528217/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74_wjyffw.webp"
-                alt="Paradise Furniture Varanasi"
-                fill
-                className="object-contain"
+                src="https://res.cloudinary.com/dfb0umklg/images/c_scale,w_170,h_42,dpr_1.5/f_auto,q_auto/v1/paradisefurniture.in/wp-content/uploads/elementor/thumbs/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74.png?_i=AA"
+                alt="Paradise Furniture"
+                width={150}
+                height={54}
+                className="h-auto w-32 object-contain sm:w-36 md:w-40"
                 priority
               />
-            </div>
+            </Link>
           </div>
           
           {/* Copyright Text - Right Aligned with accurate styling */}

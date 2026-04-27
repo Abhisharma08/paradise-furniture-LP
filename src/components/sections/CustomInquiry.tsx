@@ -68,12 +68,14 @@ export function CustomInquiry() {
             </div>
           </div>
 
-          <div className="flex h-full w-full justify-center lg:justify-start">
-            <img
-              src="https://res.cloudinary.com/dfb0umklg/images/v1776085290/WhatsApp-Image-2026-04-09-at-6.24.22-PM/WhatsApp-Image-2026-04-09-at-6.24.22-PM.jpeg"
-              alt="Paradise Furniture"
-              className="aspect-[4/3] w-full max-w-md rounded-lg object-cover shadow-xl lg:aspect-auto lg:h-full lg:max-w-none"
-            />
+          <div className="flex w-full justify-center lg:justify-start">
+            <div className="relative w-full max-w-md overflow-hidden rounded-lg shadow-xl lg:max-w-none lg:h-full">
+              <img
+                src="https://res.cloudinary.com/dfb0umklg/images/v1776085290/WhatsApp-Image-2026-04-09-at-6.24.22-PM/WhatsApp-Image-2026-04-09-at-6.24.22-PM.jpeg"
+                alt="Paradise Furniture"
+                className="h-auto w-full object-contain lg:h-full lg:object-cover"
+              />
+            </div>
           </div>
 
         </div>

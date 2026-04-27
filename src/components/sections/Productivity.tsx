@@ -7,11 +7,11 @@ export function Productivity() {
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-12">
           
           <div className="flex w-full justify-center animate-in fade-in slide-in-from-left-8 duration-700 lg:justify-start">
-            <div className="relative aspect-[4/3] w-full max-w-xl overflow-hidden rounded-lg shadow-2xl">
+            <div className="relative w-full max-w-xl overflow-hidden rounded-lg shadow-2xl">
               <img
                 src="https://res.cloudinary.com/dfb0umklg/images/v1776222279/WhatsApp-Image-2026-04-14-at-6.41.58-PM/WhatsApp-Image-2026-04-14-at-6.41.58-PM.jpeg"
                 alt="Productivity Setup"
-                className="h-full w-full object-cover"
+                className="h-auto w-full object-contain"
               />
             </div>
           </div>

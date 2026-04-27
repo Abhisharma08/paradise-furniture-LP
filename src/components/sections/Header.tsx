@@ -12,7 +12,7 @@ export function Header() {
           <Link href="/" className="group flex min-w-0 items-center gap-2" aria-label="Paradise Furniture home">
             <div className="flex shrink-0 items-center justify-center transition-transform group-hover:scale-105">
               <Image
-                src="https://res.cloudinary.com/demfgmwjk/image/upload/v1775528217/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74_wjyffw.webp"
+                src="https://res.cloudinary.com/dfb0umklg/images/c_scale,w_170,h_42,dpr_1.5/f_auto,q_auto/v1/paradisefurniture.in/wp-content/uploads/elementor/thumbs/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74.png?_i=AA"
                 alt="Paradise Furniture"
                 width={150}
                 height={54}

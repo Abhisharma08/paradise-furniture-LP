@@ -34,13 +34,13 @@ const series = [
     id: "Silver Series",
     title: "Silver Series",
     description: "Functional, stylish, and budget-friendly office seating.",
-    imageUrl: "https://res.cloudinary.com/demfgmwjk/image/upload/v1775624458/Silver_nxhzjx_yqshru.webp",
+    imageUrl: "https://res.cloudinary.com/dfb0umklg/images/c_scale,w_300,h_300,dpr_1.5/f_auto,q_auto/v1777269616/Silver/Silver.png?_i=AA",
   },
   {
     id: "Ergo Series",
     title: "Ergo Series",
     description: "Adjustable synchro mechanism with 4-way arms for tailored comfort.",
-    imageUrl: "https://res.cloudinary.com/demfgmwjk/image/upload/v1775624458/Ergo_uzffaz_nc32nk.webp",
+    imageUrl: "https://res.cloudinary.com/dfb0umklg/images/c_scale,w_300,h_300,dpr_1.5/f_auto,q_auto/v1777269520/Ergo/Ergo.png?_i=AA",
   },
   {
     id: "Task Ergo Series",

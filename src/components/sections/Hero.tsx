@@ -103,7 +103,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden py-12 md:min-h-[calc(100vh-5rem)] md:py-16">
+    <section className="relative flex items-center overflow-hidden py-20 md:min-h-[calc(100vh-5rem)] md:py-16">
       <div className="absolute inset-0">
         <img
           src={heroImg.imageUrl}
@@ -115,7 +115,7 @@ export function Hero() {
 
       <div className="relative z-20 mx-auto grid w-full max-w-7xl items-center gap-8 px-4 text-white sm:px-6 lg:grid-cols-2 lg:gap-10 lg:px-12 xl:gap-12 xl:px-16">
         <div className="mx-auto max-w-xl space-y-5 text-center lg:mx-0 lg:text-left">
-          <h1 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
+          <h1 className="text-[45px] md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
             <span className="text-red-500">Your Destination</span><br />
             <span className="text-red-500">for</span> Office Chairs
           </h1>
