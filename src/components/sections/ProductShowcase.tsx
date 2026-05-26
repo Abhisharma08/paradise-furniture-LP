@@ -22,7 +22,7 @@ const series = [
     id: "Platinum Series",
     title: "Platinum Series",
     description: "Sleek low-back style in leatherette for a sophisticated edge.",
-    imageUrl: "https://res.cloudinary.com/demfgmwjk/image/upload/v1775624456/Bitsro_ibuulh_ul5ie9.webp",
+    imageUrl: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779790297/ChatGPT_Image_May_26_2026_03_12_39_PM_mhgmde.png",
   },
   {
     id: "Gold Series",

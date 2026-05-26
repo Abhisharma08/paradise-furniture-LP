@@ -71,7 +71,7 @@ export function CustomInquiry() {
           <div className="flex w-full justify-center lg:justify-start">
             <div className="relative w-full max-w-md overflow-hidden rounded-lg shadow-xl lg:max-w-none lg:h-full">
               <img
-                src="https://res.cloudinary.com/dfb0umklg/images/v1776085290/WhatsApp-Image-2026-04-09-at-6.24.22-PM/WhatsApp-Image-2026-04-09-at-6.24.22-PM.jpeg"
+                src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779790357/ChatGPT_Image_Mar_12_2026_02_58_51_PM_kgxppo.png"
                 alt="Paradise Furniture"
                 className="h-auto w-full object-contain lg:h-full lg:object-cover"
               />
