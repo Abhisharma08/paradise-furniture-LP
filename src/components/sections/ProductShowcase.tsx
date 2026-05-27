@@ -10,7 +10,7 @@ const series = [
     id: "Premium Series",
     title: "Premium Series",
     description: "Elegant high-back designs with knee-tilt mechanism and plush upholstery.",
-    imageUrl: "https://res.cloudinary.com/demfgmwjk/image/upload/v1775623715/Premium_hfvwrb_x9qnhj.webp",
+    imageUrl: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779863525/5fcdd219-77d2-4cb0-b212-9e930df1f061_rjng3f.jpg",
   },
   {
     id: "Diamond Series",
