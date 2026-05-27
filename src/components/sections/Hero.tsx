@@ -116,13 +116,13 @@ export function Hero() {
       <div className="relative z-20 mx-auto grid w-full max-w-7xl items-center gap-8 px-4 text-white sm:px-6 lg:grid-cols-2 lg:gap-10 lg:px-12 xl:gap-12 xl:px-16">
         <div className="mx-auto max-w-xl space-y-5 text-center lg:mx-0 lg:text-left">
           <h1 className="text-[45px] md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
-            <span className="text-red-500">Your Destination</span><br />
-            <span className="text-red-500">for</span> Office Chairs
+            <span className="text-red-500">Upgrade Every Workspace</span><br />
+            <span className="text-red-500"></span> with Ergonomic Office Seating
           </h1>
 
           <p className="mx-auto max-w-lg text-sm leading-relaxed text-white/80 sm:text-base lg:mx-0">
-            Elevate your workspace with our extensive selection of office chairs and experience the Paradise difference for yourself today!
-          </p>
+            Ergonomically designed seating solutions built for comfort, posture support, and modern workspaces.
+            </p>
 
           <Button className="hidden md:inline-block rounded-md bg-red-600 hover:bg-red-700">
             Download Catalogue
