@@ -1,11 +1,20 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
 
 export default function ThankYouPage() {
+  useEffect(() => {
+    // Fire conversion event
+    if (typeof window !== "undefined" && typeof gtag !== "undefined") {
+      gtag("event", "conversion", {
+        send_to: "AW-759943811/l1uYCIqIwY0YEIOlr-oC",
+      });
+    }
+  }, []);
   return (
     <div className="flex min-h-screen flex-col bg-gray-50">
       <Header />
