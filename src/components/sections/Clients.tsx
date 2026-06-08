@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { CloudinaryImage } from "@/lib/cloudinaryLoader";
 
 export function Clients() {
 
@@ -46,7 +46,7 @@ export function Clients() {
                 className="flex h-24 w-44 shrink-0 items-center justify-center rounded-2xl border border-border bg-background p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
 
-                <Image
+                <CloudinaryImage
                   src={logo}
                   alt={`Client Logo ${index + 1}`}
                   width={140}

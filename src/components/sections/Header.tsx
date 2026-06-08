@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import { CloudinaryImage } from "@/lib/cloudinaryLoader";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
@@ -11,7 +11,7 @@ export function Header() {
         <div className="flex min-w-0 items-center">
           <Link href="/" className="group flex min-w-0 items-center gap-2" aria-label="Paradise Furniture home">
             <div className="flex shrink-0 items-center justify-center transition-transform group-hover:scale-105">
-              <Image
+              <CloudinaryImage
                 src="https://res.cloudinary.com/dfb0umklg/images/c_scale,w_170,h_42,dpr_1.5/f_auto,q_auto/v1/paradisefurniture.in/wp-content/uploads/elementor/thumbs/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74.png?_i=AA"
                 alt="Paradise Furniture"
                 width={150}

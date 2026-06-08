@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { CloudinaryImage } from "@/lib/cloudinaryLoader";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -32,9 +32,9 @@ export function Footer() {
           {/* Paradise Furniture Logo - Left Aligned */}
           <div className="flex items-center">
             <Link href="/" aria-label="Paradise Furniture home">
-              <Image
+              <CloudinaryImage
                 src="https://res.cloudinary.com/dfb0umklg/images/c_scale,w_170,h_42,dpr_1.5/f_auto,q_auto/v1/paradisefurniture.in/wp-content/uploads/elementor/thumbs/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74.png?_i=AA"
-                alt="Paradise Furniture"
+                alt="Paradise Furniture Logo"
                 width={150}
                 height={54}
                 className="h-auto w-32 object-contain sm:w-36 md:w-40"

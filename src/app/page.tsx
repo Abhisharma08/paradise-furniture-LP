@@ -1,9 +1,22 @@
+import dynamic from "next/dynamic";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
-import { CustomInquiry } from "@/components/sections/CustomInquiry";
-import { ProductShowcase } from "@/components/sections/ProductShowcase";
-import { Footer } from "@/components/sections/Footer";
-import { Clients } from "@/components/sections/Clients";
+
+const Clients = dynamic(() => import("@/components/sections/Clients").then((mod) => mod.Clients), {
+  loading: () => <div className="h-48 bg-gray-50/50 animate-pulse" />,
+});
+
+const CustomInquiry = dynamic(() => import("@/components/sections/CustomInquiry").then((mod) => mod.CustomInquiry), {
+  loading: () => <div className="h-96 bg-gray-50/50 animate-pulse" />,
+});
+
+const ProductShowcase = dynamic(() => import("@/components/sections/ProductShowcase").then((mod) => mod.ProductShowcase), {
+  loading: () => <div className="h-96 bg-gray-50/50 animate-pulse" />,
+});
+
+const Footer = dynamic(() => import("@/components/sections/Footer").then((mod) => mod.Footer), {
+  loading: () => <div className="h-48 bg-gray-50/50 animate-pulse" />,
+});
 
 export default function Home() {
   return (

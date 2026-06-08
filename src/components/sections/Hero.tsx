@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { CloudinaryImage } from "@/lib/cloudinaryLoader";
 import {
   Select,
   SelectTrigger,
@@ -105,10 +106,14 @@ export function Hero() {
   return (
     <section className="relative flex items-center overflow-hidden py-20 md:min-h-[calc(100vh-5rem)] md:py-16">
       <div className="absolute inset-0">
-        <img
+        <CloudinaryImage
           src={heroImg.imageUrl}
-          alt=""
+          alt="Paradise Office Seating Setup"
+          fill
+          priority
+          fetchPriority="high"
           className="h-full w-full object-cover"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>

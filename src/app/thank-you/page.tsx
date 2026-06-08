@@ -6,6 +6,8 @@ import { CheckCircle2 } from "lucide-react";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
 
+declare const gtag: any;
+
 export default function ThankYouPage() {
   useEffect(() => {
     // Fire conversion event

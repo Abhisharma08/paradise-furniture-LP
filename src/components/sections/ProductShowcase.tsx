@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { CloudinaryImage } from "@/lib/cloudinaryLoader";
 import { Button } from "@/components/ui/button";
 // ❌ removed placeholder import
 import Link from "next/link";
@@ -99,11 +99,12 @@ export function ProductShowcase() {
               
               <div className="p-3 pb-0">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-md">
-                  <Image
+                  <CloudinaryImage
                     src={item.imageUrl}
                     alt={item.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
               </div>

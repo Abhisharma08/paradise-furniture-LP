@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import { CloudinaryImage } from "@/lib/cloudinaryLoader";
 
 export function CustomInquiry() {
   return (
@@ -70,10 +71,13 @@ export function CustomInquiry() {
 
           <div className="flex w-full justify-center lg:justify-start">
             <div className="relative w-full max-w-md overflow-hidden rounded-lg shadow-xl lg:max-w-none lg:h-full">
-              <img
+              <CloudinaryImage
                 src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779790357/ChatGPT_Image_Mar_12_2026_02_58_51_PM_kgxppo.png"
-                alt="Paradise Furniture"
-                className="h-auto w-full object-contain lg:h-full lg:object-cover"
+                alt="Paradise Furniture Showcase"
+                width={600}
+                height={450}
+                className="h-auto w-full object-cover lg:h-full lg:object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
