@@ -40,6 +40,27 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-16479245566');
+
+            // Phone conversion configuration
+            gtag('config', 'AW-759943811/M7g1CPm9lb0cEIOlr-oC', {
+              'phone_conversion_number': '+919330017569'
+            });
+
+            // Event snippet for Click to call conversion page
+            window.gtag_report_conversion = function (url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-759943811/khfHCPa9lb0cEIOlr-oC',
+                  'value': 1.0,
+                  'currency': 'INR',
+                  'event_callback': callback
+              });
+              return false;
+            };
           `,
         }} />
       </head>

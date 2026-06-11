@@ -25,7 +25,17 @@ export function Header() {
 
         <div className="shrink-0">
           <Button asChild className="h-11 rounded-md bg-primary px-8 text-sm font-black text-white transition-transform hover:scale-105 hover:bg-primary/90 active:scale-95">
-            <Link href="/#quote">Enquire Now</Link>
+            <Link 
+              href="tel:+919330017569"
+              onClick={(e) => {
+                if (typeof window !== "undefined" && (window as any).gtag_report_conversion) {
+                  e.preventDefault();
+                  (window as any).gtag_report_conversion("tel:+919330017569");
+                }
+              }}
+            >
+              +919330017569
+            </Link>
           </Button>
         </div>
       </div>
