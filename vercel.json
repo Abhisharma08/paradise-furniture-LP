@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/office-workstation/:path*",
+      "destination": "https://paradise-workstation.vercel.app/office-workstation/:path*"
+    }
+  ]
+}
