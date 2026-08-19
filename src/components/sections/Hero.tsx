@@ -39,6 +39,7 @@ export function Hero() {
           name: formData.name,
           phone: formData.phone,
           email: formData.email,
+          city: formData.city,
           step: stepNumber,
         }
         : {
@@ -66,7 +67,7 @@ export function Hero() {
   };
 
   const handleNext = async () => {
-    if (!formData.name || !formData.phone || !formData.email) {
+    if (!formData.name || !formData.phone || !formData.email || !formData.city) {
       alert("Please fill all fields");
       return;
     }
@@ -178,6 +179,17 @@ export function Hero() {
                 />
               </div>
 
+              <div>
+                <label className="text-sm font-medium">City</label>
+                <Input
+                  placeholder="Enter your city"
+                  value={formData.city}
+                  onChange={(e) =>
+                    setFormData({ ...formData, city: e.target.value })
+                  }
+                />
+              </div>
+
               <Button
                 onClick={handleNext}
                 disabled={savingStep}
@@ -197,17 +209,6 @@ export function Hero() {
                   value={formData.company}
                   onChange={(e) =>
                     setFormData({ ...formData, company: e.target.value })
-                  }
-                />
-              </div>
-
-              <div>
-                <label className="text-sm font-medium">City</label>
-                <Input
-                  placeholder="Enter your city"
-                  value={formData.city}
-                  onChange={(e) =>
-                    setFormData({ ...formData, city: e.target.value })
                   }
                 />
               </div>
